@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_app/View/quizpage.dart';
 
 class homePage extends StatefulWidget {
 
@@ -20,7 +21,8 @@ class _homePageState extends State<homePage> {
       padding: EdgeInsets.all(20.0),
     child: InkWell(
       onTap: (){
-        debugPrint('Card Tapped');
+        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => getJson()
+        ));
       },
       child: Material(
         color: Colors.lightBlue,
