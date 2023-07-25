@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/View/quizpage.dart';
 
-class homePage extends StatefulWidget {
+
+
+class HomePage extends StatefulWidget {
+  static const String routeName='/homescreen';
+  const HomePage({super.key});
 
   @override
-  _homePageState createState() => _homePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _homePageState extends State<homePage> {
+
+
+class _HomePageState extends State<HomePage> {
   List<String> images = [
     "images/java.png",
     "images/python.png",
@@ -21,8 +27,7 @@ class _homePageState extends State<homePage> {
       padding: EdgeInsets.all(20.0),
     child: InkWell(
       onTap: (){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => getJson()
-        ));
+      Navigator.pushNamed(context, GetJson.routeName);
       },
       child: Material(
         color: Colors.lightBlue,
@@ -59,7 +64,7 @@ class _homePageState extends State<homePage> {
               ),
               Container(
                 padding: EdgeInsets.all(20.0),
-                child: Text("Let's check your JAVA skill",
+                child: Text("Let's check your skill",
                   style: TextStyle(
                     fontSize: 18.0,
                     fontFamily: "Alike",
